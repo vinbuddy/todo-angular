@@ -1,0 +1,12 @@
+<li>
+    @if (isEdited) {
+    <input [(ngModel)]="todo" type="text" />
+    <button (click)="editTodo()">Save</button>
+    <button (click)="disableEdit()">Cancel</button>
+
+    } @else {
+    <span>{{ todo }}</span>
+    <button style="margin-left: 10px" (click)="enableEdit()">Edit</button>
+    <button style="margin-left: 10px" (click)="deleteTodo()">Delete</button>
+    }
+</li>
